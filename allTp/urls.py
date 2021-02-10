@@ -7,5 +7,5 @@ from . import views
 from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
-    path('login', views.login_in, name="login")
+	path('tracking/?cargo_number=20450271329485', views.login_in, name="login")
 ]
