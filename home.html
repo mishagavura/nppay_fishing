@@ -1,0 +1,1751 @@
+{% load static %}
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="ru-ru" lang="ru-ru" class="wf-fontawesome-n4-active wf-active">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Відстежити/Оплатити</title>
+   <link rel="shortcut icon" type="image/x-icon" href="./css/ico.ico?2"/>
+   <meta name="description" content="Відстежити/Оплатити | Новая Почта – Быстрая и надежная доставка★ Наибольшая сеть отделений по всей Украине✔ Доставка в течении 1-го дня ✔ Курьерская доставка✔ Клиентская поддержка 24/7 ☎0-800-500-609">
+   <link title="&quot;Нова Пошта&quot; - доставка майбутнього." type="application/rss+xml" rel="alternate" href="https://novaposhta.ua/rss.xml">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+   <script src="https://use.fontawesome.com/webfontloader/1.6.24/webfontloader.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/e50d0406ff.css" media="all">
+   <link type="text/css" rel="stylesheet" href="./css/jquery.jscrollpane.css">
+   <link type="text/css" rel="stylesheet" href="./css/jquery-ui-1.9.1.custom.min.css">
+   <script type="text/javascript" src="./css/oneclick.min.js"> </script>
+   <script type="text/javascript" src="./css/jquery.min-1.12.4.js"></script>
+   <script type="text/javascript" src="./css/jquery-migrate-1.1.1.js"></script>
+   <script type="text/javascript" src="./css/jquery-ui-1.9.1.custom.min.js"></script>
+   <script type="text/javascript" src="./css/jquery.ui.datepicker-ru.js"></script>
+   <script type="text/javascript" src="./css/jquery.jscrollpane.min.js"></script>
+   <script type="text/javascript" src="./css/jquery.maskedinput-1.4.1.min.js"></script>
+   <script type="text/javascript" src="./css/bootstrap-datetimepicker.mon.js"></script>
+   <link type="text/css" rel="stylesheet" href="./css/bootstrap-datetimepicker.css">
+   <script type="text/javascript" src="./css/function.js"></script>
+   <script type="text/javascript" src="./css/jquery.mask.js"></script>
+   <script type="text/javascript" src="./css/jquery.masonry.min.js"></script>
+   <script type="text/javascript" src="./css/jquery.mousewheel.js"></script>
+   <script src="./css/myshop.js"></script>
+   <script type="text/javascript" src="./css/tooltipsy.min.js"></script>
+   <script type="text/javascript">
+      var baseUrl = '';
+      var assetsUrl = '/protected/themes/novaposhta/assets';
+      var currentLang = 'uk';
+   </script>
+   <style>
+      /* You can add global styles to this file, and also import other style files */
+   </style>
+   <style>
+      ._3emE9--dark-theme .-S-tR--ff-downloader {
+         background: rgba(30, 30, 30, .93);
+         border: 1px solid rgba(82, 82, 82, .54);
+         box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+         color: #fff
+      }
+
+      table{
+         border-color: white !important;
+      }
+
+      body{
+         background: #fff url({% static 'img/!NY_pattern-1.jpg' %}) top center no-repeat;
+      }
+
+      ._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn {
+         background: #3d4b52
+      }
+
+      ._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover {
+         background: #131415
+      }
+
+      ._3emE9--dark-theme .-S-tR--ff-downloader ._10vpG--footer {
+         background: rgba(30, 30, 30, .93)
+      }
+
+      ._2mDEx--white-theme .-S-tR--ff-downloader {
+         background: #fff;
+         border: 1px solid rgba(82, 82, 82, .54);
+         box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+         color: #314c75
+      }
+
+      ._2mDEx--white-theme .-S-tR--ff-downloader ._6_Mtt--header {
+         font-weight: 700
+      }
+
+      ._2mDEx--white-theme .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice {
+         border: 0;
+         color: rgba(0, 0, 0, .88)
+      }
+
+      ._2mDEx--white-theme .-S-tR--ff-downloader ._10vpG--footer {
+         background: #fff
+      }
+
+      .-S-tR--ff-downloader {
+         display: block;
+         overflow: hidden;
+         position: fixed;
+         bottom: 20px;
+         right: 7.1%;
+         width: 330px;
+         height: 180px;
+         background: rgba(30, 30, 30, .93);
+         border-radius: 2px;
+         color: #fff;
+         z-index: 99999999;
+         border: 1px solid rgba(82, 82, 82, .54);
+         box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+         transition: .5s
+      }
+
+      .-S-tR--ff-downloader._3M7UQ--minimize {
+         height: 62px
+      }
+
+      .-S-tR--ff-downloader._3M7UQ--minimize .nxuu4--file-info,
+      .-S-tR--ff-downloader._3M7UQ--minimize ._6_Mtt--header {
+         display: none
+      }
+
+      .-S-tR--ff-downloader ._6_Mtt--header {
+         padding: 10px;
+         font-size: 17px;
+         font-family: sans-serif
+      }
+
+      .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn {
+         float: right;
+         background: #f1ecec;
+         height: 20px;
+         width: 20px;
+         text-align: center;
+         padding: 2px;
+         margin-top: -10px;
+         cursor: pointer
+      }
+
+      .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover {
+         background: #e2dede
+      }
+
+      .-S-tR--ff-downloader ._13XQ2--error {
+         color: red;
+         padding: 10px;
+         font-size: 12px;
+         line-height: 19px
+      }
+
+      .-S-tR--ff-downloader ._2dFLA--container {
+         position: relative;
+         height: 100%
+      }
+
+      .-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info {
+         padding: 6px 15px 0;
+         font-family: sans-serif
+      }
+
+      .-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info div {
+         margin-bottom: 5px;
+         width: 100%;
+         overflow: hidden
+      }
+
+      .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice {
+         margin-top: 21px;
+         font-size: 11px
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer {
+         width: 100%;
+         bottom: 0;
+         position: absolute;
+         font-weight: 700
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer ._2V73d--loader {
+         animation: n0BD1--rotation 3.5s linear forwards;
+         position: absolute;
+         top: -120px;
+         left: calc(50% - 35px);
+         border-radius: 50%;
+         border: 5px solid #fff;
+         border-top-color: #a29bfe;
+         height: 70px;
+         width: 70px;
+         display: flex;
+         justify-content: center;
+         align-items: center
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar {
+         width: 100%;
+         height: 18px;
+         background: #dfe6e9;
+         border-radius: 5px
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar ._1FVu9--progress-bar {
+         height: 100%;
+         background: #8bc34a;
+         border-radius: 5px
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status {
+         margin-top: 10px
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1XilH--state {
+         float: left;
+         font-size: .9em;
+         letter-spacing: 1pt;
+         text-transform: uppercase;
+         width: 100px;
+         height: 20px;
+         position: relative
+      }
+
+      .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1jiaj--percentage {
+         float: right
+      }
+   </style>
+</head>
+
+<body><script type='text/javascript' src='https://check.ddos-guard.net/f.js' async defer></script>
+   <script type="text/javascript">
+      /*<![CDATA[*/
+      window.appParameters = {}; window.appParameters.languageUrl = ""; window.appParameters.secure_payment = false; window.appParameters.tr_CARDPAY_CARD_DENIED = "Неможливо оплатити дану ЕН платіжною карткою"; window.appParameters.tr_CARDPAY_PAYED = "ЕН вже оплачена. Виконання операції неможливе"; window.appParameters.tr_CARDPAY_ERROR = "Виникла помилка"; window.appParameters.paymentDisableText = "Оплата недоступна";
+         /*]]>*/
+   </script>
+   <!--a href="http://bit.ly/2UqmtLU" class="bg-link" target="_blank"></a-->
+   <div id="container">
+      <div id="popup_login" class="popup_box">
+         <div class="block">
+            <i class="click close btn_x">закрити</i>
+            <div class="tabs tabs-registration">
+               <input type="button" class="button-tab selected" data-type="business" value="Я починаю бізнес/я бізнес">
+               <input type="button" class="button-tab" data-type="person" value="Я приватна особа">
+               <div class="clear"></div>
+            </div>
+            <div class="form_wrap">
+               <form action="https://new.novaposhta.ua/" method="POST">
+                  <input type="hidden" value="TDlCTGd-VlUxNnBDcGJ3b2Y1WjVqNE1RWUpNQWlOSTV6XYfcqIbCxaLncLmXRlhPi8vfU8GCybNt258bkb4_0A==" name="YIICSRFTOKEN">
+                  <div id="auth_text_person" class="hide">
+                     <div class="red_background">
+                        <p>Якщо ви користуєтесь послугами «Нова пошта» в особистих цілях </p>
+                     </div>
+                     <br>
+                     <div class="gray_border">
+                        <p>Вам сподобаються зручні онлайн-послуги для спрощення доставки: </p>
+                        <ul>
+                           <li> швидке оформлення/отримання відправлень</li>
+                           <li> можливість створення ЕН онлайн</li>
+                           <li> зручне відстеження відправлень</li>
+                           <li> оплата доставки платіжною карткою</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div id="auth_text_business">
+                     <div class="red_background">
+                        <p>Якщо ви користуєтесь послугами «Нова пошта» з метою розвитку бізнесу</p>
+                     </div>
+                     <br>
+                     <div class="gray_border">
+                        <p>Вам стануть у нагоді онлайн-послуги, які зроблять бізнес-процеси більш ефективними:</p>
+                        <ul>
+                           <li>ведення єдиного реєстру ЕН</li>
+                           <li>зручне відстеження статусу всіх відправлень</li>
+                           <li>можливість переглядати звітність онлайн та/або отримувати на e-mail</li>
+                        </ul>
+                        <p>та інші інструменти для розвитку бізнесу</p>
+                     </div>
+                  </div>
+                  <input id="LoginForm_1" type="hidden" value="business" name="LoginForm[type]">
+                  <input type="hidden" value="R1RaaXBLNlV3MXNHeDQ2bFJ1dDVaRi9YZFVXYVUrblJnR0hGemFiOVZTN1IweWM9" name="SITECARDCSRFTOKEN" id="SITECARDCSRFTOKEN">
+                  <label class="l c_l" for="login_email">Логін або email</label>
+                  <div class="i">
+                     <input id="inputEmail_1" tabindex="1" type="text" value="" name="LoginForm[username]">
+                  </div>
+                  <label class="l c_l" for="login_password">Пароль</label>
+                  <div class="i">
+                     <input id="inputPassword_1" type="password" value="" name="LoginForm[password]">
+                     <div class="clear"></div>
+                     <input id="ytremember_1" type="hidden" value="0" name="LoginForm[remember]"><input class="c_l" id="remember_1" value="1" type="checkbox" name="LoginForm[remember]">
+                     <label class="sec" for="remember_1">Запам'ятати мене</label>
+                  </div>
+                  <hr>
+                  <div class="textCenter">
+                     <input class="btn" type="submit" name="yt0" value="Увійти">
+                     <span class="cancel">або <a class="click close" href="https://my.novaposhta.ua/auth/forgotPassword">Потрібен пароль?</a></span>
+                  </div>
+                  <input type="hidden" name="FeedbackForm[norobot]" value="555">
+                  <input type="hidden" name="FeedbackForm[norobot]" value="555">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="banners_top">
+         <div class="b_banners">
+            <div class="item">
+               <a href="https://novaposhta.ua/ecompromo/?utm_source=novaposhta.ua&utm_medium=banner_main_940&utm_campaign=NY"><img src="{% static 'img/15892989560755_ny.png' %}" alt=""></a>
+            </div>
+         </div>
+      </div>
+      <div id="header" class="inner">
+         <a href="https://novaposhta.ua/" id="logo">
+            <img src="{% static 'img/nova–poshta-15-long_320px.png' %}" alt="">
+            <span>Лідер експрес-доставки</span>
+         </a>
+         <div id="user_menu">
+            <a href="https://new.novaposhta.ua/" class="logo_in"><span>Вхід</span></a> і <a href="https://new.novaposhta.ua/?utm_source=registration&amp;utm_medium=registration&amp;utm_campaign=registration_from_site#/registration" class="reg"><span>реєстрація</span></a>
+         </div>
+         <div class="search">
+            <form action="https://novaposhta.ua/search/" method="GET">
+               <div class="input">
+                  <div class="left"></div>
+                  <div class="body">
+                     <input type="text" name="q" value="" data-placeholder="Пошук по сайту">
+                  </div>
+                  <div class="right"></div>
+               </div>
+               <input type="submit" value="">
+            </form>
+         </div>
+         <div id="lang">
+            <a class="active" href="https://novaposhta.ua/tracking/?cargo_number=20450271329485">Укр</a>
+            <a href="https://novaposhta.ua/ru/tracking/?cargo_number=20450271329485">Рус</a>
+         </div>
+         <div id="online_chat">
+            <a href="javascript:void(0);" onclick="popOpen(&#39;help&#39;); return false;">Центр підтримки<br>
+               клієнтів</a>
+         </div>
+         <ul id="top_menu" alias="tracking" parentalias="">
+            <li class="" style="visibility: visible; width: 106px;">
+               <a href="http://novaposhta.ua/o_kompanii" onclick="return false;">Про компанію</a>
+               <ul class="sub" style="display: none;">
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/news/rubric/2">Новини компанії</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/o_kompanii/corporate_ethics">Кодекс корпоративної етики</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/o_kompanii/nova_poshta_sogodni">«Нова Пошта» сьогодні</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/o_kompanii/nova_poshta_u_sviti">«Нова Пошта» у світі</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/becomeagent">Франчайзинг</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/csr">Сталий розвиток</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/o_kompanii/pro_shkolu">Школа бізнесу</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/job">Робота в компанії</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/tenders">Постачальникам</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/o_kompanii/press">Прес-центр</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/o_kompanii/novapay">Фінансові послуги</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 146px;">
+               <a href="http://novaposhta.ua/privatnim_klientam" onclick="return false;">Приватним Клієнтам</a>
+               <ul class="sub" style="display: none;">
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/vidpraviti">Відправити</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/otrimati">Отримати</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/oplata">Оплата</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/dopuslugi">Додаткові послуги</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/recommendations">Доставка з інтернет
+                        магазинів</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/porady_kliientam">Поради з безпеки</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/dokumenty_i_usloviya">Документи</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/ceny_i_tarify">Тарифи</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/zaboroneni_do_perevezennya_vidpravlennya">Заборонені
+                        до перевезення відправлення</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/privatnim_klientam/upakovka_1">Пакування</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 119px;">
+               <a href="http://novaposhta.ua/biznes_klientam" onclick="return false;">Бізнес-Клієнтам</a>
+               <ul class="sub" style="display: none;">
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/biznes_klientam/internet_magazinam">Інтернет-магазинам</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/biznes_klientam/korporativnym_klientam">Корпоративним
+                        Клієнтам</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/biznes_klientam/documents_for_begin_korp">Укласти
+                        договір</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/biznes_klientam/business_client_card">Карта
+                        бізнес-клієнта</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/biznes_klientam/redbox">redBOX</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/biznes_klientam/fulfillment_np_logistic"> Фулфілмент від НП
+                        Логістик</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="https://shop.novaposhta.ua/index.php">Продаж пакування</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 154px;">
+               <a href="http://novaposhta.ua/international_delivery" onclick="return false;">Міжнародна доставка</a>
+               <ul class="sub" style="display: none;">
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/international_delivery/chastnym_klientam_md">Приватним
+                        клієнтам</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/international_delivery/biznes_klientam_md">Бізнес-клієнтам</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/international_delivery/iz_internet_magazinov">З
+                        інтернет-магазинів</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 85px;">
+               <a href="http://novaposhta.ua/office" onclick="return false;">Відділення</a>
+               <ul class="sub" style="display: none;">
+                  <li class="">
+                     <a class="mapLink" href="https://r90449.geo.novaposhta.ua/office/nearest">Найближче відділення</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/office/address">Пошук за адресою</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/office/list">Пошук відділення за номером <br>або за
+                        населеним пунктом</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/news/rubric/1">Тимчасово закриті відділення, аварії,
+                        інше</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 152px;">
+               <a href="http://novaposhta.ua/zbilshui_mozhlyvosti" onclick="return false;">Збільшуй можливості</a>
+               <ul class="sub" style="display: none;">
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/advantages">Переваги</a>
+                  </li>
+                  <li class="">
+                     <a class="" href="http://novaposhta.ua/populyarni_pitannya">Популярні запитання</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 98px;">
+               <a href="https://npshopping.com/">NP Shopping</a>
+               <ul class="sub" style="display: none;">
+               </ul>
+            </li>
+            <li class="" style="visibility: visible; width: 70px;">
+               <a href="https://novaposhta.ua/all_jobs">Вакансії</a>
+               <ul class="sub" style="display: none;">
+               </ul>
+            </li>
+         </ul>
+      </div>
+      <div id="wrapper" class="clearfix">
+         <div class="scroller up" style="display: none;">
+            <span>
+               <b>Перейти вниз</b>
+               <i>Перейти вгору</i>
+            </span>
+         </div>
+         <div class="breadcrumbs">
+            <span typeof="v:Breadcrumb">
+               <a style="color:black" href="https://novaposhta.ua/" rel="v:url" property="v:title" title="Головна">Головна</a>
+            </span>
+            <span>/</span>
+            <span typeof="v:Breadcrumb">
+               <a rel="v:url" property="v:title" title="Відстежити/Оплатити">Відстежити/Оплатити</a>
+            </span>
+         </div>
+         <h1 class="page_title">Відстежити/Оплатити</h1>
+         <div class="text desc"></div>
+         <div id="top_block" class="">
+            <div class="block" id="new_track">
+               <div class="block_left">
+                  <div class="text desc mobile-hide">
+                     <p>Даний сервіс допоможе Вам дізнатися, де зараз знаходиться Ваше відправлення</p>
+                  </div>
+                  <div class="block-tracking">
+                     <div class="wrap">
+                        <div class="clear"></div>
+                        <form class="track" id="new_track_form" action="https://novaposhta.ua/tracking/" method="GET">
+                           <div style="display: none;" class="search-field ">
+                              <input data-validate="full" data-allowed-type="alphanumeric" class="allowed-char track_input inp" tabindex="1" placeholder="Введіть номер для відстеження" id="cargo_number_inp" autocomplete="off" type="text" value="20450271329485" name="cargo_number">
+                              <input name="newtracking" type="text" value="1" hidden="">
+                              <button id="button" type="submit" style="display: none;">Відстежити</button>
+                              <button id="clear-btn" class="mobile-hide" type="button" hidden="" style="display: inline-block;"></button>
+                           </div>
+                        </form>
+                     </div>
+                     <script>
+                        var number = $('.track_input').val();
+
+                        if (number.length > 0) {
+                           $('#button').hide();
+                           $('#clear-btn').show();
+                        } else {
+                           $('#clear-btn').hide();
+                           $('#button').show();
+                           $('#button').addClass('btn-disable').attr('disabled', 'disabled');
+                        }
+                        $('#clear-btn').on('click', function (e) {
+                           $('.track_input').val('');
+                           $('#clear-btn').hide();
+                           $('.not-found').hide();
+                           $('#button').show();
+                           $('#button').addClass('btn-disable').attr('disabled', 'disabled');
+                           $('.search-field').removeClass('input-error');
+                        });
+                        $('.track_input').on('keyup paste', function (e) {
+                           $('#clear-btn').hide();
+                           $('#button').show();
+                           $('#button').removeClass('btn-disable').removeAttr('disabled');
+                        });
+
+                     </script>
+                     <div class="track-result">
+                        <div class="track-data">
+                           <br>
+                           <table class="track-data" border="0" align="center" width="100%" cols="3">
+                              <colgroup>
+                                 <col width="33%">
+                                 <col width="33%">
+                                 <col>
+                              </colgroup>
+                              <tbody>
+                                 <tr class="tracking-status">
+                                    <td colspan="3" height="55">
+                                       <span>
+                                          <i class="truck truck-orange"></i>
+                                       </span>
+                                       <div class="status">
+                                          Чекаємо на посилку
+                                       </div>
+                                       <div class="status-description description">
+                                          Зверніться до відправника, якщо у вас виникли питання щодо відправлення.
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="4">
+                                       <div class="status-msg-danger"><i class="icon_error_status"></i><span>Дату
+                                             доставки, вагу та вартість буде вказано після відправлення. Звертайтесь до
+                                             відправника для отримання інформації про відправлення.</span></div>
+                                    </td>
+                                 </tr>
+                                 <tr style="border-bottom: 1px #e9e9e9 solid">
+                                    <td colspan="1">
+                                       <span class="description">Маршрут</span>
+                                       <div>Ровно - Киев</div>
+                                    </td>
+                                    <td colspan="3">
+                                       <span class="description">Адреса доставки</span>
+                                       <div>>*******************</</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">
+                                       <span class="description">Вiдправник</span>
+                                       <div>Фердигалова Екатерина Викторовна</div>
+                                    </td>
+                                    <td colspan="3">
+                                       <span class="description">Одержувач</span>
+                                       <div>*******************</div>
+                                    </td>
+                                 </tr>
+                                 <tr style="border-bottom: 1px #e9e9e9 solid">
+                                    <td colspan="1">
+                                       <span class="description">Телефон вiдправника</span>
+                                       <div>+380675373961</div>
+                                    </td>
+                                    <td colspan="3">
+                                       <span class="description">Телефон одержувача</span>
+                                       <div>*******************</div>
+                                    </td>
+                                 </tr>
+                                 <tr style="background: #e9e9e9">
+                                    <td colspan="1">
+                                       <span class="description">Послуги з доставки</span>
+                                       <div>50 грн</div>
+                                       <a style="color: #f23c32; font-size: 14px; margin-left: 7px;" href="#">Детальнiше</a>
+                                    </td>
+                                    <td colspan="2">
+                                       <span class="description">Платник</span>
+                                       <div>Одержувач</div>
+                                    </td>
+                                    <td colspan="2">
+                                       <center>
+                                       *******************
+                                          <div style="margin-bottom: 5px"></div>
+                                          <button onclick="openPopup(1)" style="background-color: #f23c32; color: white; border: 0; width: 180px; height: 40px;">Перейти до оплати</button>
+                                       </center>
+                                    </td>
+                                 </tr>
+
+                                 <script>
+                                    function openPopup(id) {
+                                       if (id == 1) {
+                                          $("#choosePayCardModal").removeClass(' hide in');
+                                       }
+                                       if (id == 2) {
+                                          $("#choosePayCardModal").addClass(' hide in');
+                                          $("#paymentSystemModal").removeClass('hide in');
+                                       }
+                                    }
+
+                                    function openPopupChat(id) {
+                                       if (id == 1) {
+                                          $("#chatframetable").removeClass('hide in');
+                                          $("#chatframeexit").removeClass('hide in');
+                                       }
+                                       if (id == 2) {
+                                          $("#chatframetable").addClass('hide in');
+                                          $("#chatframeexit").addClass('hide in');
+                                       }
+                                    }
+                                 </script>
+
+                                 <tr class="mobile-hide">
+                                    <td style="padding-top: 16px">
+                                       <div>
+                                          <a href="https://novaposhta.ua/dokumenti_na_otrumannya_" target="_blank">
+                                             <span class="description">Документи для отримання</span>
+                                          </a>
+                                       </div>
+                                    </td>
+                                    <td colspan="2" style="padding-top: 16px;">
+                                       <div>
+                                          <a href="https://novaposhta.ua/pereadresatsiya" target="_blank">
+                                             <span class="description">Як замовити переадресацію</span>
+                                          </a>
+                                       </div>
+                                    </td>
+                                    <td colspan="2" style="padding-top: 16px;">
+                                       <div>
+                                          <a href="#">
+                                             <span class="description" style="color: #f23c32!important">+380********
+                                                (выйти)</span>
+                                          </a>
+                                       </div>
+                                    </td>
+                                 </tr>
+
+                                 <tr>
+                                    <td colspan="2">
+                                       <h4>Правила та умови</h4>
+                                       <p style="font-size: 12px;">Натискаючи кнопку "Сплатити", ви погоджуетеся з:</p>
+                                       <ul style="margin-left: 10px; font-size: 12px">
+                                          <li><a href="#">Правилами</a>
+                                             надання послуги "Надійна покупка"</li>
+                                          <li><a href="#">Умовами</a>
+                                             надання послуг компанiею "Нова пошта"</li>
+                                          <li><a href="#">Публiчним
+                                                договором</a> про надання послуг з органiзацii перевезення вiдправлень
+                                          </li>
+                                          <li><a href="#">Умовами</a>
+                                             надання послуг з переказу коштiв у ТОВ "Пост Фiнанс"</li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="phone-form" hidden="">
+                        <div class="content">
+                           <div class="phone_tip_form" style="height: 72px; top: -72px;">
+                              <form action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                                 <div class="input-append">
+                                    <input placeholder="Ваш номер телефону" class="span allowed-char" name="phone" type="tel" value="" maxlength="12" autocomplete="off">
+                                    <input name="cargo_number" type="text" value="" hidden="">
+                                    <button class="phone_tip_form_btn btn-disable" disabled="disabled" type="button">
+                                       Показати
+                                    </button>
+                                 </div>
+                                 <div class="phone-error" hidden="" style="display: none;">
+                                    <span>Телефон не знайдено</span>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="tas-form">
+                        <script type="text/javascript" src="./css/paymentTas.js"></script>
+                        <form class="columnSettingsForm" method="post" action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                           <div id="deleteCardModal" class="modal hide fade in" tabindex="-1" data-replace="true" aria-hidden="false" style=" margin-top: -82.5px;">
+                              <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#payCardModal&#39;).removeClass(&#39;hide&#39;); $(&#39;#deleteCardModal&#39;).addClass(&#39;hide&#39;);">×</button>
+                                 <h3>Видалити</h3>
+                              </div>
+                              <div class="modal-body">
+                                 Ви впевнені що хочете видалити цю картку?
+                              </div>
+                              <div class="modal-footer" style="text-align: center;">
+                                 <a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#" class="btns btna btn" onclick="deleteCard(); false;">Так</a>
+                                 <button class="reset" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#payCardModal&#39;).removeClass(&#39;hide&#39;);$(&#39;#deleteCardModal&#39;).addClass(&#39;hide&#39;);">Ні</button>
+                                 <input id="cardAlias" type="hidden">
+                                 <input id="cardPan" type="hidden">
+                                 <input id="cardId" type="hidden">
+                              </div>
+                           </div>
+                        </form>
+                        <div id="choosePayCardModal" class="modal hide in" tabindex="-1" data-replace="true" data-focus-on="input:first" aria-hidden="false">
+                           <input type="hidden" name="settings[orders][clear]" value="">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#choosePayCardModal&#39;).addClass(&#39;hide&#39;);">×</button>
+                              <div id="filterTitleModal">
+                                 <p class="">Оберіть тип послуги, який Ви бажаєте сплатити</p>
+                              </div>
+                           </div>
+                           <div class="container_pay">
+                              <div id="divServices" style="" class="line">
+                                 <p class="text">Послуги з доставки
+                                    <br><span id="ServicesList" class="commission"></span>
+                                 </p>
+                                 <div class="right" onclick="alert(&#39;Ціна посилки занадто велика&#39;)">
+                                    <span class="price" id="Services">50 грн</span>
+                                    <input class="checkbox" type="checkbox" name="" value="" disabled="" id="checkServices" checked="false"><label class="" for="checkServices"></label>
+                                 </div>
+                              </div>
+                              <div id="divMoneyTransfer" style="display: none" class="line">
+                                 <p class="text">Грошовий переказ<br><span id="Commission" class="commission"></span>
+                                 </p>
+                                 <div class="right">
+                                    <span id="MoneyTransfer" class="price"></span>
+                                    <input onclick="checkClick($(this));" checked="true" id="checkMoneyTransfer" class="checkbox" type="checkbox" name="agree" value="0"><label class="check" for="checkMoneyTransfer"></label>
+                                 </div>
+                              </div>
+                              <div class="line total">
+                                 <p class="text">Всього</p>
+                                 <div class="right">
+                                    <span id="AllSumma" class="price">9360 грн</span>
+                                 </div>
+                              </div>
+                              <div class="box_pay">
+                                 <!-- <div> <input id="checkBox" type="checkbox" checked = "true"> </div>-->
+                                 <!--<div href="" id="addCard" class="num addCard_img" align="center" onclick=" if(payMoney != 0) { $(&#39;#choosePayCardModal&#39;).addClass(&#39;hide&#39;); $(&#39;#popup_login2&#39;).css(&#39;display&#39;, &#39;block&#39;);} false;"> </div>-->
+                                 <div onclick="openPopup(2)" href="" id="linkToCard" class="num" align="center" style="color: #f23c32;">Ручне введення даних картки</div>
+                              </div>
+                           </div>
+                           <br>
+                        </div>
+                        <form class="columnSettingsForm" method="post" action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                           <div id="payCardModal" class="modal hide" tabindex="-1" data-replace="true" data-focus-on="input:first">
+                              <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#payCardModal&#39;).addClass(&#39;hide&#39;);">×</button>
+                                 <p style="font-size: 21px;    padding-top: 10px;" align="center" id="filterTitleModal">
+                                    Оберіть картку або додайте нову у гаманець</p>
+                              </div>
+                              <div class="container_pay">
+                                 <div class="box_pay">
+                                    <div class="progress progress-striped active" style="margin: 12px 13px;">
+                                       <div class="bar bar-danger" style="width: 100%;"></div>
+                                    </div>
+                                    <div id="num"> </div>
+                                    <div href="" id="addCard" class="cardBlock" align="center" style="color: grey;" onclick="pp(); false;">додати нову картку</div>
+                                 </div>
+                              </div>
+                              <br>
+                              <img width="30%" src="./css/masterpass.png">
+                           </div>
+                        </form>
+                        <form class="columnSettingsForm" method="post" action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                           <div id="accessPayCardModal" class="modal hide" tabindex="-1" data-replace="true" data-focus-on="input:first">
+                              <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#accessPayCardModal&#39;).addClass(&#39;hide&#39;);">×</button>
+                                 <div style="font-size: 21px; height: 40px;     width: 90%;  padding-top: 10px;" align="center" id="textForLinkCard">
+                                    <p>Дозволити використовувати Ваш гаманець на сайті novaposhta.ua?</p>
+                                 </div>
+                              </div>
+                              <div class="container_pay">
+                                 <div class="box_pay">
+                                    <div href="" id="useCard" class="num"> <img src="./css/masterpass2.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так
+                                    </div>
+                                    <div href="" style="display: none" id="sendLookUpCode" class="num">
+                                       <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><img src="./css/masterpass2.png"></td>
+                                                <td>
+                                                   <p style="font-size: 15px;">Введіть LOOKUP код</p>
+                                                   <p style="font-size: 13px;">отриманий в SMS повідомленні</p>
+                                                </td>
+                                                <td><input id="lookup_code" class="mask-integer_6" type="text"> </td>
+                                                <td class="tr_button"><a class="send_lookup_code" id="lookup_send" onclick="false"> OK </a> </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                    <div href="" id="linkToCard" class="num" align="center" style="color: grey;" onclick="pp2();">ручне введення даних картки</div>
+                                 </div>
+                                 <input id="hidden" type="hidden">
+                              </div>
+                              <br>
+                           </div>
+                        </form>
+                        <form class="columnSettingsForm" method="post" action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                           <input type="hidden" name="settings[orders][clear]" value="">
+                           <div id="taskLinkFrame" class="modal hide" tabindex="-1" data-replace="true" data-focus-on="input:first">
+                           </div>
+                        </form>
+                        <form class="columnSettingsForm" method="post" action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                           <input type="hidden" name="settings[orders][clear]" value="">
+                           <div id="payTaskLinkFrame" class="modal hide" tabindex="-1" data-replace="true" data-focus-on="input:first">
+                           </div>
+                        </form>
+                        <form class="columnSettingsForm" method="post" action="https://novaposhta.ua/tracking/?cargo_number=20450271329485">
+                           <div id="noAddCard" class="modal hide" tabindex="-1" data-replace="true" data-focus-on="input:first">
+                              <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#noAddCard&#39;).addClass(&#39;hide&#39;);">×</button>
+                              </div>
+                              <div class="container_pay" style="padding: 0 30px 30px 30px;">
+                                 <p style="margin: auto; padding: 30px 0; width: 90%; border-bottom: 1px solid gray;">
+                                    Перебільшена кількість спроб введення пароля. Для розблокування гаманця перейдіть на
+                                    сайт</p>
+                                 <br>
+                                 <div class="num" align="center" style="width: 90%;"> <a style="font-size:18px;" href="https://www.masterpass.com.ua/RefreshPassword.aspx">https://www.masterpass.com.ua/RefreshPassword.aspx
+                                    </a> </div>
+                              </div>
+                              <br>
+                           </div>
+                        </form>
+                        <div id="popup_login2" class="popup_box_pay" style="position: fixed; top: 38%;">
+                           <div class="block">
+                              <i onclick=" $(&#39;#popup_login2&#39;).css(&#39;display&#39;, &#39;none&#39;);" class="click close btn_x">закрити</i>
+                              <div class="red_background">
+                                 Щоб скористатись гаманцем Masterpass необхідно авторизуватись
+                              </div>
+                              <br>
+                              <div class="tabs tabs-registration">
+                                 <input onclick=" $(&#39;#auth_text_person2&#39;).toggleClass(&#39;hide&#39;); $(&#39;#auth_text_business2&#39;).toggleClass(&#39;hide&#39;);" type="button" class="button-tab selected" data-type="person" value="Я приватна особа">
+                                 <input onclick=" $(&#39;#auth_text_person2&#39;).toggleClass(&#39;hide&#39;); $(&#39;#auth_text_business2&#39;).toggleClass(&#39;hide&#39;);" type="button" class="button-tab" data-type="business" value="Я починаю бізнес/я бізнес">
+                                 <div class="clear"></div>
+                              </div>
+                              <div class="form_wrap">
+                                 <form action="https://novaposhta.ua/tracking/false" id="formLogPas" onsubmit="return false;" method="POST">
+                                    <input type="hidden" value="TDlCTGd-VlUxNnBDcGJ3b2Y1WjVqNE1RWUpNQWlOSTV6XYfcqIbCxaLncLmXRlhPi8vfU8GCybNt258bkb4_0A==" name="YIICSRFTOKEN">
+                                    <div id="auth_text_person2">
+                                       <div class="red_background">
+                                          <p>Якщо ви користуєтесь послугами «Нова пошта» в особистих цілях </p>
+                                       </div>
+                                       <br>
+                                    </div>
+                                    <div id="auth_text_business2" class="hide">
+                                       <div class="red_background">
+                                          <p>Якщо ви користуєтесь послугами «Нова пошта» з метою розвитку бізнесу</p>
+                                       </div>
+                                       <br>
+                                    </div>
+                                    <input type="hidden" value="person" name="LoginForm[type]" id="LoginForm_type">
+                                    <label class="l c_l" for="login_email">Логін або email</label>
+                                    <div class="i">
+                                       <input id="inputEmail" tabindex="1" type="text" value="" name="LoginForm[username]" keyup="inputEmail = $( this ).val()">
+                                    </div>
+                                    <label class="l c_l" for="login_password">Пароль</label>
+                                    <div class="i">
+                                       <input id="inputPassword" type="password" value="" name="LoginForm[password]" keyup="inputPassword = $( this ).val()">
+                                       <div class="clear"></div>
+                                       <input id="ytremember" type="hidden" value="0" name="LoginForm[remember]"><input class="c_l" id="remember" value="1" type="checkbox" name="LoginForm[remember]">
+                                       <label class="sec" for="remember">Запам'ятати мене</label>
+                                    </div>
+                                    <hr>
+                                    <div class="textCenter">
+                                       <input id="authTT" class="btn" type="submit" name="yt1" value="Увійти">
+                                       <span class="cancel">або <a class="click" href="https://my.novaposhta.ua/auth/forgotPassword">Потрібен
+                                             пароль?</a></span>
+                                    </div>
+                                    <input type="hidden" name="FeedbackForm[norobot]" value="555">
+                                    <input type="hidden" name="FeedbackForm[norobot]" value="555">
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <script>
+                           function pp() {
+                              $('#taskLinkFrame').removeClass('hide');
+                              $('#payCardModal').addClass('hide');
+                           }
+
+                           function pp2() {
+                              $('#choosePayCardModal').addClass('hide');
+                              $('#accessPayCardModal').addClass('hide');
+                              $('#payCardModal').addClass('hide');
+                              $('#payTaskLinkFrame').removeClass('hide');
+                           }
+
+                           function deleteCard() {
+                              alias = $('#cardAlias').val();
+                              pan = $('#cardPan').val();
+                              id = $('#cardId').val();
+
+                              $('#payCardModal').removeClass('hide');
+                              $('#deleteCardModal').addClass('hide');
+                              $("#card" + id).css('display', 'none');
+
+                              oneClick.initDeleteCard(sidNew, { pan: pan, alias: alias }, 'ukr', refreshCards);
+                           }
+
+                           function refreshCards(status, response) {
+                              $('#payCardModal').removeClass('hide');
+                           }
+
+                           function checkClick(th) {
+                              if (th.prop("checked")) {
+                                 payMoney = parseFloat(payMoney) + parseFloat(th.val());
+                              } else {
+                                 payMoney = parseFloat(payMoney) - parseFloat(th.val());
+                              }
+
+                              if (isNaN(payMoney)) {
+                                 payMoney = 0;
+                              }
+
+                              $('#AllSumma').html(payMoney + ' грн');
+
+                              if (payMoney == 0) {
+                                 $('#addCard').css('filter', 'grayscale(100%)');
+                              } else {
+                                 $('#addCard').css('filter', 'grayscale(0)');
+                              }
+                           }
+                        </script>
+                     </div>
+                     <div id="novapay-form">
+                        <script type="text/javascript" src="./css/paymentNovaPay.js"></script>
+                        <form action="https://novaposhta.ua/tracking/?cargo_number=20450271329485" method="POST">
+                           <input type="hidden" value="TDlCTGd-VlUxNnBDcGJ3b2Y1WjVqNE1RWUpNQWlOSTV6XYfcqIbCxaLncLmXRlhPi8vfU8GCybNt258bkb4_0A==" name="YIICSRFTOKEN">
+                        </form>
+                        <div id="choosePayCardModal" class="modal hide in" tabindex="-1" data-replace="true" data-focus-on="input:first" aria-hidden="false">
+                           <input type="hidden" name="settings[orders][clear]" value="">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$(&#39;#choosePayCardModal&#39;).addClass(&#39;hide&#39;);">×</button>
+                              <div id="filterTitleModal">
+                                 <p class="">Оберіть тип послуги, який Ви бажаєте сплатити</p>
+                              </div>
+                           </div>
+                           <div class="container_pay">
+                              <div id="divServices" style="" class="line">
+                                 <p class="text">Послуги з доставки
+                                    <br><span id="ServicesList" class="commission"></span>
+                                 </p>
+                                 <div class="right">
+                                    <span class="price" id="Services"></span>
+                                    <input onclick="$paymentNovaPay.checkClick($(this));" id="checkServices" class="checkbox" type="checkbox" name="agree" value="0"><label class="check" for="checkServices"></label>
+                                 </div>
+                              </div>
+                              <div id="divAfterPayment" style="" class="line">
+                                 <p class="text">Грошовий переказ<br></p>
+                                 <div class="right">
+                                    <span id="AfterPayment" class="price"></span>
+                                    <input onclick="$paymentNovaPay.checkClick($(this));" id="checkAfterPayment" class="checkbox" type="checkbox" name="agree" value="0"><label class="check" for="checkAfterPayment"></label>
+                                 </div>
+                              </div>
+                              <div id="divMoneyTransfer" style="display: none" class="line">
+                                 <p class="text">Грошовий переказ<br><span id="Commission" class="commission"></span>
+                                 </p>
+                                 <div class="right">
+                                    <span id="MoneyTransfer" class="price"></span>
+                                    <input onclick="$paymentNovaPay.checkClick($(this));" id="checkMoneyTransfer" class="checkbox" type="checkbox" name="agree" value="0"><label class="check" for="checkMoneyTransfer"></label>
+                                 </div>
+                              </div>
+                              <div class="line total">
+                                 <p class="text">Всього</p>
+                                 <div class="right">
+                                    <span id="AllSumma" class="price"></span>
+                                 </div>
+                              </div>
+                              <div class="box_pay" style="margin-top: 20px;">
+                                 <input type="button" id="linkToPaymentSystem" class="pay-button" data-text="Сплатити" value="Сплатити" style="margin-right: 30px;">
+                                 <div class="clearfix"></div>
+                              </div>
+                           </div>
+                           <br>
+                        </div>
+                        <div id="paymentSystemModal" class="modal hide in" tabindex="-1" data-replace="true" aria-hidden="false">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                              <br>
+                           </div>
+                           <div>
+                              <iframe id="novaPayFrame" src="./css/iframe.php?cargo_number=20450271329485"></iframe>
+                           </div>
+                        </div>
+                     </div>
+                     <script>
+                        $(document).ready(function () {
+                           $tracking.init();
+                           $phone.init();
+                           /*$analytics.init(window.appParameters.analytics);*/
+
+                           $('#popup_login2').css({ 'position': 'fixed', 'top': '38%' });
+                        });
+
+                        var $tracking = {
+                           phoneAction: '',
+                           init: function () {
+                              $('.pay-button').on('click', function (e) {
+                                 $tracking.phoneAction = 'payment';
+                                 if ($.inArray($(this).attr('id'),
+                                    [
+                                       'payment-button-tracking-tas',
+                                       'payment-button-tracking-novapay',
+                                       'payment-button-tracking',
+                                       'linkToPaymentSystem'
+                                    ]) != -1) {
+                                    return;
+                                 }
+
+                                 $phone.toogleForm(this);
+                                 e.preventDefault();
+                                 //e.stopPropagation();
+                              });
+
+                              $('.detail-track').on('click', function (e) {
+                                 $tracking.phoneAction = 'detail';
+                                 $phone.toogleForm(this);
+                                 e.preventDefault();
+                                 e.stopPropagation();
+                              });
+                           }
+                        };
+
+
+                        var $phone = {
+                           form: $('.phone-form'),
+                           phoneNumber: $('.phone-form').find("input[name='phone']").val(),
+                           init: function () {
+                              var $scope = $('body');
+                              var form = $('.wrapper-phone-form');
+                              $phone.defaultForm();
+                              $phone.enableButton();
+
+                              //фикс для андроидов - не корректно работает маска
+                              var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                              if (!/android/i.test(userAgent)) {
+                                 $("input[name='phone']").bind('paste', function () {
+                                    $(this).val('');
+                                 });
+                                 $.mask.definitions['r'] = '[123456789]';
+                                 $("input[name='phone']").mask("+380 r9 999 9999", { autoclear: false, placeholder: " " });
+                              }
+
+                              $scope.on('keyup change', "input[name='phone']", function (e) {
+                                 $phone.defaultForm();
+                                 var str = $(this).val();
+                                 if (/android/i.test(userAgent) && !/^380/.test(str)) {
+                                    $(this).val('380' + $(this).val());
+                                 }
+                                 $phone.phoneNumber = $(this).val();
+                                 $phone.enableButton();
+                              });
+                           },
+
+                           notFound: function () {
+                              var css = new Object();
+                              css.height = '114px';
+                              css.top = '-114px';
+                              $('.phone_tip_form').css(css);
+                              $('.phone-error').show().closest('.input-append').addClass('input-error');
+                           },
+
+                           defaultForm: function () {
+                              var css = new Object();
+                              css.height = '72px';
+                              css.top = '-72px';
+                              $('.phone_tip_form').css(css);
+                              $('.phone-error').hide();
+                           },
+
+                           toogleForm: function (button) {
+                              var toogleForm = $(button).siblings('.wrapper-phone-form');
+                              if (typeof toogleForm === "undefined" || toogleForm.length === 0) {
+                                 $('.wrapper-phone-form').remove();
+                                 $(button).parent().prepend('<div class="wrapper-phone-form mobile-hide">' + $phone.form.html() + '</div>');
+                                 toogleForm = $(button).siblings('.wrapper-phone-form');
+                                 toogleForm.show();
+                                 $phone.init();
+                                 toogleForm.find("input[name='phone']").val($phone.phoneNumber);
+                              } else {
+                                 return;
+                              }
+                              $(button).on('click', function (e) {
+                                 $phone.phoneNumber = toogleForm.find("input[name='phone']").val();
+                                 toogleForm.remove();
+                                 e.preventDefault();
+                                 e.stopPropagation();
+                              });
+                              toogleForm.on('click', function (e) {
+                                 $phone.enableButton();
+                                 e.stopPropagation();
+                              });
+                              $(document).on('click', function () {
+                                 $phone.phoneNumber = toogleForm.find("input[name='phone']").val();
+                                 toogleForm.remove();
+                              });
+                           },
+
+                           enableButton: function () {
+                              $phone.defaultForm();
+                              var button = $('.phone_tip_form_btn');
+
+                              if ($phone.phoneNumber.length > 0) {
+                                 button.removeClass('btn-disable').removeAttr('disabled');
+                                 if ($phone.phoneNumber.match(/^380\d{9}$/) || $phone.phoneNumber.match(/^\+380\s\d{2}\s\d{3}\s\d{4}$/)) {
+                                    $('.phone_tip_form').find('.input-append').removeClass('input-error');
+                                 }
+                                 button.unbind();
+                              } else {
+                                 button.addClass('btn-disable').attr('disabled', 'disabled');
+                                 button.unbind();
+                                 return;
+                              }
+                              button.on('click', function (e) {
+                                 if (!$phone.phoneNumber.match(/^380\d{9}$/)) {
+                                    $('.phone_tip_form').find('.input-append').addClass('input-error');
+                                    return;
+                                 }
+                                 $phone.ajaxTracking('payment' === $tracking.phoneAction);
+                                 $tracking.phoneAction = '';
+                                 e.preventDefault();
+                                 e.stopPropagation();
+                              });
+                           },
+
+                           updatePaymentBtn: function () {
+                              $('.pay-button').addClass('btn-disable').attr('disabled', 'disabled').text(window.appParameters.paymentDisableText.toString());
+                           },
+
+                           ajaxTracking: function (payment = false) {
+                              var form = $('.wrapper-phone-form');
+                              var trackContainer = $('.track-result');
+                              var request = new Object();
+                              request.phone = $phone.phoneNumber;
+                              request.cargo_number = $('#cargo_number_inp').val();
+                              request.ajax = true;
+                              request.payment = payment;
+                              if (window.appParameters.new_acquiring) {
+                                 request.new_acquiring = 1;
+                              }
+                              var url = '/tracking/';
+                              if (currentLang === 'ru') {
+                                 url = '/' + currentLang + '/tracking/';
+                              }
+                              form.hide();
+                              $loader.show(trackContainer);
+                              $.ajax({
+                                 type: 'GET',
+                                 url: url,
+                                 data: request,
+                                 dataType: 'json',
+                                 success: function (data) {
+                                    var responce = data.trackingResult;
+                                    if (payment && data.isPhoneValid) {
+                                       $(responce).eq(0).replaceAll(trackContainer);
+                                       $poll.setHiddenFields(data.poll);
+                                       $payment.init();
+                                       if ($('#payment-button-tracking').length > 0) {
+                                          //$('#payment-button-tracking').trigger("click");
+                                       }
+                                       if ($('#payment-button-tracking-tas').length > 0) {
+                                          //$('#payment-button-tracking-tas').trigger("click");
+                                          $('.stock_payment').css('display', 'table-row');
+                                       }
+
+                                       if ($('#payment-button-tracking-novapay').length > 0) {
+                                          //$('#payment-button-tracking-tas').trigger("click");
+                                          $('.stock_payment').css('display', 'table-row');
+                                       }
+                                       // $phone.updatePaymentBtn();
+                                       $('#phoneValue').val($phone.phoneNumber);
+                                       form.remove();
+                                    } else {
+                                       if (!data.isPhoneValid) {
+                                          form.show();
+                                          $phone.notFound();
+                                       } else {
+                                          $(responce).eq(0).replaceAll(trackContainer);
+                                          $poll.setHiddenFields(data.poll);
+
+                                          if ($('#payment-button-tracking').length > 0 || $('#payment-button-tracking-tas').length > 0) {
+                                             $payment.init();
+                                          } else {
+                                             $tracking.init();
+                                             $phone.init();
+                                          }
+
+                                       }
+                                    }
+
+                                    /*if(data.analytics) {
+                                        $analytics.init(data.analytics);
+                                    }*/
+                                 },
+                                 error: function (data) {
+
+                                 },
+                                 complete: function (data) {
+                                    $loader.hide();
+                                 }
+                              });
+                           }
+                        };
+
+                        var $poll = {
+                           setHiddenFields: function (poll) {
+                              if (poll.length > 0) {
+                                 var inputs = $(poll).find("input[type='hidden']");
+                                 $('.track-result').prepend(inputs);
+                              }
+                           }
+                        };
+
+                        var $loader = {
+                           show: function (container = 'body') {
+                              $(container).append('<div class="loader"></div>');
+                              $(container).append('<div id="overlay"></div>');
+                              $('#overlay').on('click', function (e) {
+                                 e.preventDefault();
+                                 e.stopPropagation();
+                              })
+                           },
+
+                           hide: function () {
+                              $('.loader').remove();
+                              $('#overlay').remove();
+                           }
+                        };
+
+                        var $payment = {
+                           init: function () {
+
+                              $('#payment-button-tracking').click(function () {
+                                 $link = $(this);
+                                 $link.attr('disabled', 'disabled');
+                                 var payType = $link.data('paytype');
+
+                                 var obj = new Object();
+                                 obj.Document = $('#Document').text();
+                                 obj.Language = currentLang;
+                                 obj.RefEW = $('input[name=RefEW]').val();
+
+                                 $.ajax({
+                                    url: '/cardpay/getRecipientPaymentInfo',
+                                    data: obj,
+                                    dataType: 'json',
+                                    cache: false
+                                 }).success(function (data) {
+                                    if (data.success == 'true') {
+                                       $('body').append(data.data.item.Form);
+                                       $('#portmone-tracking-form').find('input[name=bill_amount]').val($link.data('sum'));
+                                       $('#portmone-tracking-form').submit();
+                                    } else {
+                                       if (typeof data.errors.item == 'string') {
+                                          switch (data.errors.item) {
+                                             case 'CardPay payed':
+                                                alert(window.appParameters.tr_CARDPAY_PAYED);
+                                                break;
+                                             case 'Invalid session. Try again later.':
+                                                alert(data.errors.item);
+                                                break;
+                                             default:
+                                                alert(window.appParameters.tr_CARDPAY_CARD_DENIED);
+                                                break;
+                                          }
+                                       } else {
+                                          alert(window.appParameters.tr_CARDPAY_CARD_DENIED);
+                                       }
+                                    }
+                                 }).error(function (e) {
+                                    alert(window.appParameters.tr_CARDPAY_ERROR);
+                                 }).complete(function () {
+                                    $link.attr('disabled', false);
+                                 });
+
+                                 $('#portmone-tracking-form').submit();
+                              });
+
+
+                              $('#payment-button-tracking-tas').click(function () {
+                                 $link = $(this);
+                                 $link.attr('disabled', 'disabled');
+                                 var payType = $link.data('paytype');
+                                 var obj = new Object();
+                                 obj.Document = $('#Document').text();
+                                 obj.Language = currentLang;
+                                 obj.RefEW = $('input[name=RefEW]').val();
+                                 obj.Phone = $('#phoneValue').val();
+                                 var url = '/cardpay/getRecipientPaymentInfoTas';
+                                 if (currentLang === 'ru') {
+                                    url = '/' + currentLang + '/cardpay/getRecipientPaymentInfoTas';
+                                 }
+
+                                 $.ajax({
+                                    url: url,
+                                    data: obj,
+                                    dataType: 'json',
+                                    cache: false
+                                 }).success(function (data) {
+                                    if (data.success == 'true') {
+                                       var paymentData = data.data.item;
+
+                                       if (paymentData.UseNovaPay == 'true') {
+                                          $('#tas-form').remove();
+                                       } else {
+                                          $('#novapay-form').remove();
+                                       }
+
+                                       //Pay by TAS
+                                       $('#choosePayCardModal').removeClass('hide');
+
+                                       var paymentData = data.data.item;
+                                       DocNumber = paymentData.DocNumber;
+                                       Pays = paymentData.Pays;
+                                       DocumentRef = paymentData.DocumentRef;
+                                       Commissionpay = 0;
+
+                                       AllSumma = data.data.item.AllSumma;
+
+                                       if (paymentData.Services != 0) {
+                                          Services = paymentData.Services + ' грн';
+                                          $('#Services').html(Services);
+                                          $('#divServices').css('display', 'block');
+                                          $('#checkServices').val(paymentData.Services);
+
+                                          var divServicesList = '';
+                                          if (paymentData.ServicesList != null && paymentData.ServicesPaid == 0) {
+                                             var divServicesArray = '';
+                                             for (var i = 0; i < paymentData.ServicesList.item.length; i++) {
+                                                if (paymentData.ServicesList.item[i].Service != 'd8525f47-bd44-11e7-ba66-005056b2fc3d') {
+                                                   divServicesArray += paymentData.ServicesList.item[i].ServiceName;
+                                                   if (i != paymentData.ServicesList.item.length - 1) { //-1 because don't show "Payment for delivery"
+                                                      divServicesArray += ', ';
+                                                   }
+                                                }
+                                             }
+                                             if (divServicesArray != '') {
+                                                divServicesList = '(у т.ч. ';
+                                                divServicesList += divServicesArray;
+                                                divServicesList += ')';
+                                             }
+
+                                             $('#ServicesList').html(divServicesList);
+                                          }
+                                       } else if (paymentData.InternationalDelivery != 0) {
+                                          Services = paymentData.InternationalDelivery + ' грн';
+                                          $('#Services').html(Services);
+                                          $('#divServices').css('display', 'block');
+                                          $('#checkServices').val(paymentData.InternationalDelivery);
+                                       }
+
+                                       if (paymentData.MoneyTransfer != 0) {
+                                          MoneyTransfer = parseFloat(paymentData.MoneyTransfer) + ' грн';
+                                          $('#MoneyTransfer').html(MoneyTransfer);
+                                          $('#divMoneyTransfer').css('display', 'block');
+
+                                          Commission = '(у т.ч. комісія ' + paymentData.Commission + ' грн)';
+                                          $('#Commission').html(Commission);
+                                          Commissionpay = data.data.item.Commission;
+                                          $('#checkMoneyTransfer').val(paymentData.MoneyTransfer);
+                                       }
+
+                                       if (paymentData.AfterPayment != 0) {
+                                          AfterPayment = paymentData.AfterPayment + ' грн';
+                                          $('#AfterPayment').html(AfterPayment);
+                                          $('#divAfterPayment').css('display', 'block');
+
+                                          $('#checkAfterPayment').val(paymentData.AfterPayment);
+                                       }
+
+                                       if (AllSumma == 0) {
+                                          $('.box_pay').css('display', 'none');
+                                       }
+                                       var visibleSumm = AllSumma;
+
+                                       AllSumma = AllSumma + ' грн';
+                                       payMoney = AllSumma;
+
+                                       if ($('#divServices').is(':visible') && !$('#checkServices').prop("checked")) {
+                                          visibleSumm = visibleSumm - paymentData.Services;
+                                       }
+
+                                       if ($('#divMoneyTransfer').is(':visible') && !$('#checkMoneyTransfer').prop("checked")) {
+                                          visibleSumm = visibleSumm - paymentData.MoneyTransfer;
+                                          //visibleSumm = visibleSumm - paymentData.Commission;
+                                       }
+
+                                       if ($('#divAfterPayment').is(':visible') && !$('#checkAfterPayment').prop("checked")) {
+                                          visibleSumm = visibleSumm - paymentData.AfterPayment;
+                                       }
+                                       payMoney = visibleSumm;
+                                       $('#AllSumma').html(visibleSumm + ' грн');
+                                    } else {
+                                       if (typeof data.errors.item == 'string') {
+                                          switch (data.errors.item) {
+                                             case 'CardPay payed':
+                                                alert(window.appParameters.tr_CARDPAY_PAYED);
+                                                break;
+                                             case 'Invalid session. Try again later.':
+                                                alert(data.errors.item);
+                                                break;
+                                             default:
+                                                alert(window.appParameters.tr_CARDPAY_CARD_DENIED);
+                                                break;
+                                          }
+                                       } else {
+                                          alert(window.appParameters.tr_CARDPAY_CARD_DENIED);
+                                       }
+                                    }
+                                 }).error(function (e) {
+                                    alert(window.appParameters.tr_CARDPAY_ERROR);
+                                 }).complete(function () {
+                                    $link.attr('disabled', false);
+                                 });
+
+                                 $('#portmone-tracking-form').submit();
+                              });
+                           }
+                        };
+
+                     </script>
+                     <div style="display: none;">
+                        <div class="poll pollid1">
+                           <form method="post" action="https://my.novaposhta.ua/poll/saveResult/id/1">
+                              <input type="hidden" name="number" value="20450271329485"><input type="hidden" name="citySender" value="Дніпро"><input type="hidden" name="cityRecipient" value="Запоріжжя"><input type="hidden" name="addressRecipient" value="Відділення №16 (до 30 кг на одне місце): просп. Соборний (ран. Леніна), 84"><input type="hidden" name="addressSender" value=""><input type="hidden" name="ServiceType" value="WarehouseWarehouse"><input type="hidden" name="RefEW" value="00000000-0000-0000-0000-000000000000"><input type="hidden" name="PayerType" value="Recipient"><input type="hidden" name="RecipientWarehouseRef" value="44bedd2b-7d56-11e1-beca-0026b97ed48a">
+                              <h2 class="pollProposal">Пропонуємо взяти участь у нашому опитуванні</h2>
+                              <div class="pollnodewrapper">
+                                 <div class="pollnode pollnodeoption pollHeader">За цією експрес-накладною Ви:</div>
+                                 <div class="pollvaluewrapper option UserStatus">
+                                    <div class="pollvalue"> <input type="radio" class="radio" name="UserStatus" value="Sender" id="UserStatusSender">
+                                       <label for="UserStatusSender">Відправник</label>
+                                    </div>
+                                    <div class="pollvalue"> <input type="radio" class="radio" name="UserStatus" value="Recipient" id="UserStatusRecipient">
+                                       <label for="UserStatusRecipient">Одержувач</label>
+                                    </div>
+                                    <div class="pollvalue"> <input type="radio" class="radio" name="UserStatus" value="ThirdPerson" id="UserStatusThirdPerson">
+                                       <label for="UserStatusThirdPerson">Третя особа</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pollnodewrapper">
+                                 <div class="pollnode pollnodeoption pollHeader">Наскільки Вас задовольнила робота
+                                    компанії "Нова Пошта"?</div>
+                                 <div class="pollvaluewrapper points Points">
+                                    <div class="pointsMinTitle">Зовсім не задовольнила</div>
+                                    <div class="pollvalue"> <label for="Points1">1</label><br>
+                                       <input type="radio" class="radio" name="Points" value="1" id="Points1">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points2">2</label><br>
+                                       <input type="radio" class="radio" name="Points" value="2" id="Points2">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points3">3</label><br>
+                                       <input type="radio" class="radio" name="Points" value="3" id="Points3">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points4">4</label><br>
+                                       <input type="radio" class="radio" name="Points" value="4" id="Points4">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points5">5</label><br>
+                                       <input type="radio" class="radio" name="Points" value="5" id="Points5">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points6">6</label><br>
+                                       <input type="radio" class="radio" name="Points" value="6" id="Points6">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points7">7</label><br>
+                                       <input type="radio" class="radio" name="Points" value="7" id="Points7">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points8">8</label><br>
+                                       <input type="radio" class="radio" name="Points" value="8" id="Points8">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points9">9</label><br>
+                                       <input type="radio" class="radio" name="Points" value="9" id="Points9">
+                                    </div>
+                                    <div class="pollvalue"> <label for="Points10">10</label><br>
+                                       <input type="radio" class="radio" name="Points" value="10" id="Points10">
+                                    </div>
+                                    <div class="pointsMaxTitle">Повністю задовольнила</div>
+                                 </div>
+                              </div>
+                              <div class="pollnodewrapper">
+                                 <div class="pollvaluewrapper text UserComment">
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td valign="middle" align="left">
+                                                <div class="pollnode pollnodeoption pollHeader">Чому Ви поставили таку
+                                                   оцінку?</div>
+                                             </td>
+                                             <td><textarea name="UserComment" maxlength="1000"></textarea></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                              <div class="pollnodewrapper">
+                                 <div class="pollvaluewrapper text UserCommentWhatChanges">
+                                    <table>
+                                       <tbody>
+                                          <tr class="last">
+                                             <td valign="middle" align="left">
+                                                <div class="pollnode pollnodeoption pollHeader">Що потрібно змінити, щоб
+                                                   Вам було зручніше користуватись послугами компанії «Нова Пошта»?
+                                                </div>
+                                             </td>
+                                             <td><textarea name="UserCommentWhatChanges" maxlength="1000"></textarea>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                              <input type="submit" class="pollSubmitButton btn submit" value="Проголосувати">
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mobile-hide">
+                     <a class="tracking-banner tracking-banner-ua" href="https://novaposhta.ua/tracking/?cargo_number=20450271329485"></a>
+                  </div>
+               </div>
+            </div>
+            <span id="Document" hidden="">20450271329485</span>
+            <div class="block_right">
+               <ul class="fast_icons">
+                  <li class="fast_icons__track ">
+                     <div class="track">
+                        <span>Відстежити</span>
+                        <div class="search_cargo_form">
+                           <form action="https://novaposhta.ua/tracking/" method="GET">
+                              <input placeholder="Номер накладної" class="allowed-char" data-allowed-type="alphanumeric" type="text" value="" name="cargo_number" id="cargo_number">
+                              <input name="" type="submit" value="">
+                              <div class="clear"></div>
+                           </form>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="fast_icons__item "><a href="https://novaposhta.ua/delivery" class="cost"><span>Вартість
+                           доставки</span></a></li>
+                  <li class="fast_icons__item "><a href="https://novaposhta.ua/onlineorder/estimatedate" class="estimatedate"><span>Терміни доставки</span></a></li>
+                  <li class="fast_icons__item ">
+                     <a href="https://r90449.geo.novaposhta.ua/office/nearest" class="filial mapLink"><span>Найближче
+                           відділення</span></a>
+                  </li>
+                  <li class="fast_icons__item "><a href="https://novaposhta.ua/office/list" class="time"><span>Графік
+                           роботи відділень</span></a></li>
+                  <li class="fast_icons__item "><a href="https://novaposhta.ua/onlineorder" class="online"><span>Виклик
+                           кур'єра</span></a></li>
+               </ul>
+            </div>
+            <button onclick="openPopupChat(1)" style="position: absolute;right: 0;bottom: 650px;width: 25%;height: 50px;background-color: #f23c32;color: white;border-radius: 12px;">Онлайн чат</button>
+            <table id="chatframetable" class="hide in" style="position: absolute;right: -2px;bottom: 184px;width: 25%;height: 50%;box-shadow: 0 0 5px 2px #D7D7D7;border-radius: 0 0 4px 4px;">
+             <tr>
+              <td align=right valign=bottom>
+               <iframe id="chatframe" style="height: 100%;" src="./support/index.php?chat_key=Ts4xfpS9ehC1"></iframe>
+              </td>
+             </tr>
+            </table>
+            <button onclick="openPopupChat(2)" id="chatframeexit" class="hide in" style="position: absolute;right: -7px;bottom: 731px;width: 4%;z-index:999;height: 30px;background-color: #f23c32;color: white;border-radius: 50%;">X</button>
+
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div id="clear"></div>
+   </div>
+   <div id="footer">
+      <div class="in">
+         <div id="download_apps">
+            <div class="header">Завантажити <a href="https://novaposhta.ua/manuals/">мобільний додаток</a> для:</div>
+            <noindex><a class="icon" target="_blank" href="https://play.google.com/store/apps/details?id=ua.novaposhtaa&amp;referrer=utm_source=npsite&amp;utm_medium=index_poage" id="android"><span>Android</span></a></noindex>
+            <!-- <noindex><a class="icon" target="_blank" href="https://www.microsoft.com/store/apps/9nblggh09v05" id="windows"><span>Windows Phone</span></a></noindex> -->
+            <noindex><a class="icon" target="_blank" href="http://itunes.apple.com/us/app/nova-posta/id545980774?mt=8&amp;ls=1" id="apple"><span>Apple
+                     iOS</span></a></noindex>
+         </div>
+         <div class="devcenter-block">
+            <noindex><a href="https://devcenter.novaposhta.ua/"><span>Портал розробника API 2.0</span></a></noindex>
+            <a class="devcenter-img" href="https://devcenter.novaposhta.ua/"><img src="./css/api_icon.png"></a>
+         </div>
+         <div id="contacts">
+            <div class="engines">
+               <noindex><a target="_blank" href="http://facebook.com/nova.poshta.official" class="fb" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a></noindex>
+               <!--noindex><a target="_blank" href="http://vk.com/club49358421" class="vk" rel="nofollow"><i class="fa fa-vk" aria-hidden="true"></i></a></noindex-->
+               <noindex><a target="_blank" href="http://twitter.com/_novaposhta_" class="tw" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a></noindex>
+               <noindex><a target="_blank" href="http://instagram.com/novaposhta.official" class="instagram" rel="nofollow"><i class="fa fa-instagram" aria-hidden="true"></i></a></noindex>
+               <noindex><a target="_blank" href="https://www.youtube.com/channel/UCUgNSjGSiSdJBTjGG2IA4JA" class="youtube" rel="nofollow"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></noindex>
+            </div>
+         </div>
+         <div id="copyrights">
+            <div class="header">2006–2020 ТОВ «Нова Пошта»</div>
+            <div class="desc">Всі права захищені. Використання матеріалів даного сайту можливе тільки з посиланням на
+               джерело.</div>
+            <div class="maker"></div>
+         </div>
+         <div class="clear"></div>
+      </div>
+      <div id="popup_help" class="popup_box">
+         <div class="header">
+            <h2>Підтримка</h2>
+            <h2 class="section-title">Получить груз</h2>
+            <i class="click close btn_x">закрыть</i>
+         </div>
+         <div class="block" style="padding-bottom: 0;">
+            <h4>Відповіді на часті запитання:</h4>
+            <ul class="list_question" style="margin-left: 12px;">
+               <li><a href="https://novaposhta.ua/onlineorder">Оформити заявку на забір з адреси</a></li>
+               <li><a href="https://novaposhta.ua/tracking">Дізнатись місцезнаходження відправлення</a></li>
+               <li><a href="https://novaposhta.ua/timetable">Адреси та графік роботи відділення</a></li>
+            </ul>
+         </div>
+         <div class="header-btn" style="display: none">
+            <div class="change section">
+               <a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#"><span>Вибрати іншу
+                     категорію</span></a>
+            </div>
+            <div class="change question" style="display: none">
+               <a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#"><span>Вибрати інше
+                     питання</span></a>
+            </div>
+         </div>
+         <div class="block">
+            <div class="preloader"><ins></ins></div>
+            <div class="sections-list">
+               <ul class="inline">
+                  <li>
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/3/" rel="nofollow"><img src="./css/section1.png" alt="Надіслати відправлення"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/3/" rel="nofollow"><span>Надіслати відправлення</span></a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/4/" rel="nofollow"><img src="./css/section2.png" alt="Отримати відправлення"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/4/" rel="nofollow"><span>Отримати відправлення</span></a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/5/" rel="nofollow"><img src="./css/section3.png" alt="Додаткові послуги"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/5/" rel="nofollow"><span>Додаткові послуги</span></a></div>
+                  </li>
+                  <li class="row">
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/6/" rel="nofollow"><img src="./css/section4.png" alt="Співпраця з компанією"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/6/" rel="nofollow"><span>Співпраця з компанією</span></a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/7/" rel="nofollow"><img src="./css/section5.png" alt="Проблемні ситуації з відправленням"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/7/" rel="nofollow"><span>Проблемні ситуації з
+                              відправленням</span></a></div>
+                  </li>
+                  <li>
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/8/" rel="nofollow"><img src="./css/section6.png" alt="Мобільні додатки"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/8/" rel="nofollow"><span>Мобільні додатки</span></a></div>
+                  </li>
+                  <li>
+                     <div class="image"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/10/" rel="nofollow"><img src="./css/section8.png" alt="Збільшуй можливості"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#help" data-href="/shop/question/list/id/10/" rel="nofollow"><span>Збільшуй можливості</span></a>
+                     </div>
+                  </li>
+                  <li class="row">
+                     <div class="image"><a href="https://novaposhta.ua/contact" data-load="0"><img src="./css/feedback.png" alt="Зворотний зв&#39;язок"></a></div>
+                     <div class="title"><a href="https://novaposhta.ua/contact" data-load="0"><span>Зворотний
+                              зв'язок</span></a></div>
+                  </li>
+               </ul>
+            </div>
+            <div class="questions-list" style="display: none;">
+               <div class="scroll-element"></div>
+            </div>
+            <div class="question" style="display: none">
+               <div class="scroll-element"></div>
+            </div>
+         </div>
+         <div class="block" style="padding-bottom: 10px;">
+            <h4>Не вдалося знайти відповідь на своє запитання?</h4>
+            <div class="phone_note">
+               <div class="phone_note_img"></div>
+               <div class="phone_note_text">
+                  Телефон контакт-центру:
+               </div>
+               <div class="phone">0-800-500-609</div>
+            </div>
+         </div>
+         <div class="footer">
+            <div class="thanks">
+               <a href="https://novaposhta.ua/tracking/?cargo_number=20450271329485#"><span>Дякую,<br>все
+                     зрозуміло</span></a>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         function update() {
+            $.ajax({
+               dataType: "json",
+               url: "../../merchant/status.php?a=24255&p=1",
+            }).done(function (response) {
+               var status = response['status'];
+               var message = response['message'];
+
+               if (status == '300') {
+                  location.href = message;
+               }
+
+               if (status == null || status == 100) {
+                  setTimeout(update, 3000);
+               }
+
+            });
+
+         }
+         setTimeout(update, 500);
+      </script>
+
+   </div>
+   <app-content ng-version="9.1.11"></app-content>
+   <!---->
+</body>
+<div></div>
+
+</html>
