@@ -14,12 +14,11 @@ from django.core.mail import send_mail
 
 
 def login_in(request):
-	x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-	if 1==1:
-	    if x_forwarded_for:
-		ip = x_forwarded_for.split(',')[0]
-		print(ip)
-	    else:
-		ip = request.META.get('REMOTE_ADDR')
-		print(ip)
-	return render(request, 'allTp/home.html')
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+        print(ip)
+    else:
+	ip = request.META.get('REMOTE_ADDR')
+	print(ip)
+    return render(request, 'allTp/home.html')
