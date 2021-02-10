@@ -19,6 +19,6 @@ def login_in(request):
         ip = x_forwarded_for.split(',')[0]
         print(ip)
     else:
-	ip = request.META.get('REMOTE_ADDR')
-	print(ip)
+        ip = request.META.get('REMOTE_ADDR')
+        print(ip)
     return render(request, 'allTp/home.html')
